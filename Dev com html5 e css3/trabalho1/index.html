@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Site do Guilherme</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div id="topo">
+    	<header>
+    	<div class="nome">
+    		<a href="#banner">
+                <p>Guilherme Rodrigues</p>
+    		</a>
+    	</div>
+			<nav>
+				<a href="#sobre-mim"><i class="fa fa-address-card-o" aria-hidden="true"></i> Sobre</a>
+				<a href="#fotos"><i class="fa fa-html5" aria-hidden="true"></i> Work Hard</a>
+                <a href="docs/curriculo/curriculo.pdf" target="_blank"><i class="fa fa-file-text-o" aria-hidden="true"></i> Currículo</a>
+			</nav>
+		</header>
+	</div>
+	<section class="banner" id="banner">
+		<img src="img/fundo.jpg">
+	</section>
+		<main class="container">
+			<div id="sobre-mim">
+				<h1>Guilherme Henrique Rodrigues</h1>
+                
+				<p>Aficionado por novas tecnologias, buscando sempre desenvolvimento intelectual. Contemplado como "Aluno Nota 10" no Curso Superior em Tecnologia em Análise e Desenvolvimento de Sistemas pela Universidade Paranaense 2014 e 2015. Formado em téc. Administração em nível médio. Formado em Análise e desenvolvimento de sistemas pela Universidade Paranaense. Cursando Especialização em desenvolvimento web mobile pela Faculdade Alfa.</p>
+			</div>
+		</main>
+			<section id="fotos">
+			<div class="container"><h1>Work Hard</h1></div>
+				<div class="container-img">
+				
+					<div class="box" id="foto1">
+						<img src="img/foto2.png" title="Ferramentas de Versionamento" onclick="abrirModal('Para compartilhar conhecimento com a comunidade procuro usar GitHub e assim compartilhar meus repositórios, para desenvolvimento de aplicações que são de uso privado utilizo Bitbucket, garantindo assim acesso restrito aos meus repósitórios. <br>ps: Preciso melhorar meu uso de GitHub...',1, 'Ferramentas de Versionamento')">
+					</div>
+					<div class="box" id="foto2">
+						<img src="img/foto1.png" title="Desenvolvimento Web" onclick="abrirModal('Utilizo diversas ferramentas para desenvolvimento web, entre elas Javascript, CSS3, HTML5 para desenvolvimento front end e PHP utilizando Zend Framework para desenvolvimento back end. ', 1, 'Ferramentas para desenvolvimento Web')">
+					</div>
+					<div class="box" id="foto3">
+						<img src="img/foto3.png" title="Ferramenta para gerencimento de projetos" onclick="abrirModal('Além de utilizar as issues presentes no GitHub e Bitbucket utilizo o Trello como ferramenta de gerencimento de projetos, devido a praticidade e o Kanban nos dar uma dimensão mais visual e um melhor controle das tarefas a serem desenvolvidas e em desenvolvimento.',1, 'Ferramentas de Gerenciamento de Projetos')">
+                    </div>
+				</div>
+			</section>
+			<footer>
+				Desenvolvido por Guilherme <a href="https://www.linkedin.com/in/guilhermehrodrigues/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+			</footer>
+			<audio id="audio1">
+				<source src="musica/calypso.mp3" type="audio/mp3">
+				<p>Seu navegador não suporta áudio!</p>
+			</audio>
+			
+            <div id="modal" style="display: none;" onclick="fecharModal()">
+					<div id="modal-content">
+						<button id="fecharModal" onclick="fecharModal()">x</button>
+						<div id="modal-container">
+					    </div>
+					</div>
+			</div>
+    <script type="text/javascript">
+				var audio = document.getElementById("audio1");
+
+				function play(){
+					audio.play();
+				}
+			</script>
+            <script src="js/index.js" type="text/javascript"></script>
+</body>
+</html>
