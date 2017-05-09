@@ -1,19 +1,3 @@
-/*
- 3. Criar:
- 3.1. Diagrama de Classes (UML) de uma loja online de livros, com as classes:
- Loja-
- Livro-
- Livro Impresso-
- Ebook-
- Venda
- Pessoa-
- Vendedor-
- Cliente-
- 3.2. Implementação em Javascript das classes (com métodos e atributos) do diagrama UML.
- 3.3. Exemplo de uso das classes
- Instanciar, fazer a chamada dos métodos para realizar uma venda.
- */
-
 class Pessoa {
 
     constructor(nome, cpf) {
