@@ -151,7 +151,7 @@ class Venda{
     }
 }
 
-let cliente = new Cliente("Guilherme", "09466330969", "Rua israel queiroz, 230");
+let cliente = new Cliente("Guilherme", "0921112943", "Rua israel queiroz, 230");
 
 let vendedor = new Vendedor("Matheus", "01234567890", "Av Brasil, 290", 123456);
 
