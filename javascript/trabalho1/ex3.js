@@ -92,25 +92,25 @@ class Livro{
 }
 
 class Ebook extends Livro{
-    constructor(nomeLivro, valor, tpMidia, qtdMinutos){
+    constructor(nomeLivro, valor, tpMidia, tamanho){
         super(nomeLivro, valor, tpMidia); 
-        this.qtdMinutos = qtdMinutos;
+        this.tamanho = tamanho;
     }
     
-    getqtdMinutos(){
-        return this.qtdMinutos;
+    gettamanho(){
+        return this.tamanho;
     }
   
 }
 
 class LivroImpresso extends Livro{
-    constructor(nomeLivro, valor, tpMidia, qtdPagina){
+    constructor(nomeLivro, valor, tpMidia, tpCapa){
         super(nomeLivro, valor, tpMidia);
-        this.qtdPagina = qtdPagina;
+        this.tpCapa = tpCapa;
     }
     
-    getqtdPagina(){
-        return this.qtdPagina;
+    gettpCapa(){
+        return this.tpCapa;
     }
 }
 
@@ -155,9 +155,9 @@ let cliente = new Cliente("Guilherme", "0921112943", "Rua israel queiroz, 230");
 
 let vendedor = new Vendedor("Matheus", "01234567890", "Av Brasil, 290", 123456);
 
-let livroImpresso = new LivroImpresso("Inferno", 50, "Impresso", 234);
+let livroImpresso = new LivroImpresso("Inferno", 50, "Impresso", "Brochura");
 
-let ebook = new Ebook("Cód da vinci", 15, "Ebook", "00:53");
+let ebook = new Ebook("Cód da vinci", 15, "Ebook", "1Mb");
 
 let itemVenda = new ItemVenda;
 
