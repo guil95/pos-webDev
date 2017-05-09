@@ -157,7 +157,7 @@ let vendedor = new Vendedor("Matheus", "01234567890", "Av Brasil, 290", 123456);
 
 let livroImpresso = new LivroImpresso("Inferno", 50, "Impresso", 234);
 
-let ebook = new Ebook("CÃ³d da vinci", 15, "Ebook", "00:53");
+let ebook = new Ebook("Cód da vinci", 15, "Ebook", "00:53");
 
 let itemVenda = new ItemVenda;
 
