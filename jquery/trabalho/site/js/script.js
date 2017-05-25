@@ -16,20 +16,50 @@ $(document).ready(function () {
         speed: 500,
         fade: true,
         cssEase: 'linear',
-        
-    });
-    	$(window).scroll(function(){
-		if ($(this).scrollTop() > 100) {
-			$('#scrollToTop').fadeIn();
-		} else {
-			$('#scrollToTop').fadeOut();
-		}
-	});
 
-	$('#scrollToTop').click(function(){
-		$('html, body').animate({scrollTop : 0},800);
-		return false;
-	}); 
- 
+    });
+    $('#scrollToTop').fadeOut();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#scrollToTop').fadeIn();
+        } else {
+            $('#scrollToTop').fadeOut();
+        }
+    });
+
+    $('#scrollToTop').click(function () {
+        $('html, body').animate({scrollTop: 0}, 800);
+        return false;
+    });
+
+    $.ajax({
+        url: "/json/estados-cidades.json",
+        dataType: "json",
+        type: "GET"
+    }).done(function (data) {
+        var html = '';
+        for (var i in data.estados) {
+            html += '<option value=' + i + '>' + data.estados[i].nome + '</option>';
+        }
+        console.log(html)
+        $("#estado").append(html);
+    });
+
+    $("#estado").click(function () {
+        var estado = $(this).val();
+        $.ajax({
+            url: "/json/estados-cidades.json",
+            dataType: "json",
+            data: {estado : estado},
+            type: "GET"
+        }).done(function (data) {
+            var html = '';
+            for(var i in data.estados[estado].cidades){
+                html += '<option value='+i+'>'+data.estados[estado].cidades[i]+'</option>';
+            }
+            $("#cidade").html(html);
+        });
+    });
+
 });
 

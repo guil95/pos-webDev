@@ -108,3 +108,16 @@ ul.sub-menu {
     z-index: 120;
     text-decoration: none;
 }
+
+#container{
+    width: 1050px;
+    margin: auto;
+    font-family: "Open Sans", Tahoma, Arial;
+}
+.slick-next{
+    display: none !important;
+}
+.slick-prev{
+    display: none !important;
+}
+
